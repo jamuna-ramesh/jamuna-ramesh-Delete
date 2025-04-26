@@ -1,6 +1,6 @@
 
 import Util.ConnectionUtil;
-import Util.FileUtil;
+//import Util.FileUtil;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -34,7 +34,8 @@ public class DeleteRecords {
      */
     public void problem1(){
 
-        String sql = FileUtil.parseSQLFile("problem1.sql");
+       // String sql = FileUtil.parseSQLFile("problem1.sql");
+        String sql = "DELETE FROM site_user WHERE firstname = 'Steve'";
 
         try {
             Connection connection = ConnectionUtil.getConnection();
